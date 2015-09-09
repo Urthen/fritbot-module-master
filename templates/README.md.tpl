@@ -2,4 +2,4 @@
 
 Author: <%= author %>
 
-A lovely Fritbot module.
+A lovely [Fritbot](https://github.com/Urthen/fritbot) module.

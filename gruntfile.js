@@ -3,10 +3,10 @@ function genConfigJson() {
     var fs = require('fs');
 
     console.log("It doesn't look like you have a .config.json file. Describe your information so this script can template it into modules.\n");
-    var name = prompt('What is the name you wish to use as the Author? ');
+    var author = prompt('What is the name you wish to use as the Author? ');
     var username = prompt('What is your github username? ');
     var config = {
-        name : name,
+        author : author,
         username : username
     };
 

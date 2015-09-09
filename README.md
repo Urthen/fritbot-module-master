@@ -4,6 +4,7 @@
 
 ## Setup
 
+* Clone this repository into the folder where you want your generated module(s) to go
 * `npm install -g grunt-cli` to install grunt-cli globally
 * `npm install` to install local requirements
 * The first time you use this script, it will prompt you for your name and Github username. This information will be stored and templated in to all future modules you create. It can be modified by changing the `.config.json` file generated.
@@ -37,4 +38,8 @@ The module loader looks for two things when deciding whether or not to load a pa
 
 ## Publishing Modules
 
-Once you've gotten your module ready to go, [publish it to npmjs](https://docs.npmjs.com/getting-started/publishing-npm-packages) as you would any other package. Any other Fritbot user can now install and use your module! Read the npmjs docs for more information on how to publish and update your modules.
+Once you've gotten your module ready to go, [publish it to npmjs](https://docs.npmjs.com/getting-started/publishing-npm-packages) as you would any other package. Any other Fritbot user can now install and use your module!
+
+I have also included the grunt [jscs](https://github.com/jscs-dev/grunt-jscs), [jshint](https://github.com/gruntjs/grunt-contrib-jshint), and [push-release](https://github.com/JonnyBGod/grunt-push-release) plugins in the standard gruntfile. Checking your code style is an option step, but preferred if you want your module in the official lists. To check your style, run `grunt style`.
+
+To bump the version and release, run `grunt push:(major/minor/patch)` (which will push to github) and then `npm publish`. We recommend you follow [semantic versioning](http://semver.org/) for determining whether to bump the major, minor, or patch version numbers.
